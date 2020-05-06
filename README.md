@@ -8,7 +8,7 @@ $ open https://github.com/google/googletest
 
 ## Tasks
 
-- [x] 1. Создать публичный репозиторий с названием **lab05** на сервисе **GitHub**
+- [x] 1. Создать публичный репозиторий с названием **lab06** на сервисе **GitHub**
 - [x] 2. Выполнить инструкцию учебного материала
 - [x] 3. Ознакомиться со ссылками учебного материала
 - [x] 4. Составить отчет и отправить ссылку личным сообщением в **Slack**
@@ -27,18 +27,18 @@ $ source scripts/activate
 ```
 
 ```ShellSession
-$ git clone https://github.com/${GITHUB_USERNAME}/lab04 projects/lab05
-Cloning into 'projects/lab05'...
+$ git clone https://github.com/${GITHUB_USERNAME}/lab04 projects/lab06
+Cloning into 'projects/lab06'...
 Unpacking objects: 100% (32/32), done.
-$ cd projects/lab05
+$ cd projects/lab06
 $ git remote remove origin
-$ git remote add origin https://github.com/${GITHUB_USERNAME}/lab05
+$ git remote add origin https://github.com/${GITHUB_USERNAME}/lab06
 ```
 
 ```ShellSession
 $ mkdir third-party
 $ git submodule add https://github.com/google/googletest third-party/gtest # add a test framework as a submodule of the repository that we’re working on
-Cloning into '/home/kichyr/Acronis/kichyr/workspace/projects/lab05/third-party/gtest'...
+Cloning into '/home/kichyr/Acronis/kichyr/workspace/projects/lab06/third-party/gtest'...
 remote: Enumerating objects: 20, done.
 remote: Counting objects: 100% (20/20), done.
 remote: Compressing objects: 100% (17/17), done.
@@ -103,7 +103,7 @@ EOF
 $ cmake -H. -B_build -DBUILD_TESTS=ON # build the project
 -- Configuring done
 -- Generating done
--- Build files have been written to: /home/kichyr/Acronis/kichyr/workspace/projects/lab05/_build
+-- Build files have been written to: /home/kichyr/Acronis/kichyr/workspace/projects/lab06/_build
 
 $ cmake --build _build # build subdirectory
 Scanning dependencies of target print
@@ -132,7 +132,7 @@ Scanning dependencies of target gmock_main
 [100%] Built target gmock_main
 $ cmake --build _build --target test # build tests
 Running tests...
-Test project /home/kichyr/Acronis/kichyr/workspace/projects/lab05/_build
+Test project /home/kichyr/Acronis/kichyr/workspace/projects/lab06/_build
     Start 1: check
 1/1 Test #1: check ............................   Passed    0.00 sec
 
@@ -155,9 +155,9 @@ $ _build/check # run all tests
 [  PASSED  ] 1 test.
 $ cmake --build _build --target test -- ARGS=--verbose # build test in detail
 Running tests...
-UpdateCTestConfiguration  from :/home/kichyr/Acronis/kichyr/workspace/projects/lab05/_build/DartConfiguration.tcl
-UpdateCTestConfiguration  from :/home/kichyr/Acronis/kichyr/workspace/projects/lab05/_build/DartConfiguration.tcl
-Test project /home/kichyr/Acronis/kichyr/workspace/projects/lab05/_build
+UpdateCTestConfiguration  from :/home/kichyr/Acronis/kichyr/workspace/projects/lab06/_build/DartConfiguration.tcl
+UpdateCTestConfiguration  from :/home/kichyr/Acronis/kichyr/workspace/projects/lab06/_build/DartConfiguration.tcl
+Test project /home/kichyr/Acronis/kichyr/workspace/projects/lab06/_build
 Constructing a list of tests
 Done constructing a list of tests
 Updating test list for fixtures
@@ -167,9 +167,9 @@ Checking test dependency graph end
 test 1
     Start 1: check
 
-1: Test command: /home/kichyr/Acronis/kichyr/workspace/projects/lab05/_build/check
+1: Test command: /home/kichyr/Acronis/kichyr/workspace/projects/lab06/_build/check
 1: Test timeout computed to be: 10000000
-1: Running main() from /home/kichyr/Acronis/kichyr/workspace/projects/lab05/third-party/gtest/googletest/src/gtest_main.cc
+1: Running main() from /home/kichyr/Acronis/kichyr/workspace/projects/lab06/third-party/gtest/googletest/src/gtest_main.cc
 1: [==========] Running 1 test from 1 test suite.
 1: [----------] Global test environment set-up.
 1: [----------] 1 test from Print
@@ -188,7 +188,7 @@ Total Test time (real) =   0.00 sec
 ```
 
 ```ShellSession
-$ gsed -i 's/lab04/lab05/g' README.md # substitute all 'lab04' occurence by 'lab05' in README file
+$ gsed -i 's/lab04/lab06/g' README.md # substitute all 'lab04' occurence by 'lab06' in README file
 $ gsed -i 's/\(DCMAKE_INSTALL_PREFIX=_install\)/\1 -DBUILD_TESTS=ON/' .travis.yml # add code for the test building
 $ gsed -i '/cmake --build _build --target install/a\ #add code for the test launching
 - cmake --build _build --target test -- ARGS=--verbose
@@ -210,7 +210,7 @@ $ git add -p # check which files have been modified
 $ travis login --auto --pro
 Successfully logged in as kichyr!
 $ travis enable --pro
-kichyr/lab05: enabled :)
+kichyr/lab06: enabled :)
 ```
 
 ```ShellSession
@@ -225,7 +225,7 @@ $ popd
 ~/Acronis/kichyr/workspace
 $ export LAB_NUMBER=05
 $ git clone https://github.com/tp-labs/lab${LAB_NUMBER} tasks/lab${LAB_NUMBER}
-Cloning into 'tasks/lab05'...
+Cloning into 'tasks/lab06'...
 Resolving deltas: 100% (52/52), done.
 $ mkdir reports/lab${LAB_NUMBER}
 $ cp tasks/lab${LAB_NUMBER}/README.md reports/lab${LAB_NUMBER}/REPORT.md
