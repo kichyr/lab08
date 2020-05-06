@@ -1,0 +1,23 @@
+Execute command: [
+  `which`
+  `cmake`
+]
+[/home/kichyr/Acronis/kichyr/workspace/projects/lab07]> "which" "cmake"
+/snap/bin/cmake
+Execute command: [
+  `cmake`
+  `--version`
+]
+[/home/kichyr/Acronis/kichyr/workspace/projects/lab07]> "cmake" "--version"
+cmake version 3.17.2
+
+CMake suite maintained and supported by Kitware (kitware.com/cmake).
+Execute command: [
+  `cmake`
+  `--build`
+  `/home/kichyr/Acronis/kichyr/workspace/projects/lab07/_builds/clang-cxx14`
+  `--`
+]
+[/home/kichyr/Acronis/kichyr/workspace/projects/lab07]> "cmake" "--build" "/home/kichyr/Acronis/kichyr/workspace/projects/lab07/_builds/clang-cxx14" "--"
+[ 50%] Built target print
+[100%] Built target demo
